@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.user_info {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.user_info div .profile {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.user_info div img {
+  height: 25px;
+}
+.user_info div span {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.chatList {
+  padding: 20px;
+  border-bottom: 1px solid lightslategray;
+}
+.chatList .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.chatList .search .search_bar {
+  background-color: rgba(17, 25, 37, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+  gap: 20px;
+  border-radius: 10px;
+}
+.chatList .search .search_bar img {
+  height: 18px;
+}
+.chatList .search .search_bar input {
+  background: transparent;
+  outline: none;
+  flex: 1;
+}
+.chatList .search div {
+  background-color: rgba(17, 25, 37, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+.chatList .search div img {
+  height: 20px;
+}
+
+.list .last_message_container {
+  padding: 20px;
+  border-bottom: 1px solid lightslategrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+}
+.list .last_message_container:hover {
+  background: rgb(248, 185, 134);
+}
+.list .last_message_container .user_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.list .last_message_container .user_name img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.list .last_message_container .user_name div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+.list .last_message_container .user_name div .user_name {
+  font-size: 18px;
+  font-weight: 700;
+}
+.list .last_message_container .user_name div .last_message {
+  font-weight: 500;
+  text-align: start;
+}/*# sourceMappingURL=FriendsChatList.css.map */

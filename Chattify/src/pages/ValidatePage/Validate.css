@@ -1,0 +1,8 @@
+.validate-container {
+  background-image: url("../../assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

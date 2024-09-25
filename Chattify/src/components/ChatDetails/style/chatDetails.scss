@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin centerJustify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerJustify-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin centerJustify-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin centerAlign {
+  display: flex;
+  align-items: center;
+}
+
+.chat_details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .details {
+    @include centerAlign;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-bottom: 1px solid lightslategrey;
+
+    img {
+      height: 180px;
+      width: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    span {
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+
+.setting-container {
+  padding-bottom: 20px;
+
+  .setting {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    div {
+      @include centerJustify-between;
+
+      padding: 20px;
+      span {
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      img {
+        height: 30px;
+        background: rgba(17, 25, 27, 0.3);
+        padding: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .shared-image {
+    padding: 0px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-bottom: 1px solid lightslategrey;
+
+    div {
+      @include centerJustify-between();
+      margin-bottom: 10px;
+      div {
+        gap: 20px;
+        .image {
+          height: 60px;
+          width: 60px;
+          border-radius: 10px;
+        }
+
+        span {
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+
+      .download-icon {
+        height: 30px;
+        background: rgba(17, 25, 27, 0.3);
+        padding: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .danger-zone {
+    @include centerAlign();
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    .block-btn {
+      width: 100%;
+      padding: 20px;
+      background: rgb(238, 98, 98);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 20px;
+
+      &:hover {
+        background: rgb(239, 63, 63);
+      }
+    }
+    .logout-btn {
+      width: 100%;
+      padding: 20px;
+      background: rgb(106, 106, 229);
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 20px;
+
+      &:hover {
+        background: rgb(65, 65, 229);
+      }
+    }
+  }
+}

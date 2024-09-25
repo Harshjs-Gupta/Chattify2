@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin centerJustify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerJustify-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin centerJustify-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin centerAlign {
+  display: flex;
+  align-items: center;
+}
+
+.chats {
+  @include centerAlign;
+  flex-direction: column;
+
+  .top-section {
+    padding: 20px;
+    @include centerJustify-between;
+    gap: 20px;
+    border-bottom: 1px solid lightslategrey;
+
+    div {
+      .profile {
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      img {
+        height: 25px;
+      }
+
+      .user {
+        display: flex;
+        flex-direction: column;
+        .user_name {
+          font-weight: 700;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .middle-section {
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    .message {
+      display: flex;
+      max-width: 70%;
+      gap: 20px;
+      color: rgb(16, 14, 14);
+      font-weight: 500;
+      flex-direction: column;
+      align-self: flex-start;
+
+      &.own-message {
+        align-self: flex-end;
+        color: rgb(21, 13, 13);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .profilePic {
+        height: 60px;
+        border-radius: 50%;
+      }
+
+      .image {
+        height: 300px;
+        border-radius: 10px;
+      }
+
+      .text {
+        position: relative;
+        background: rgba(17, 25, 37, 0.3);
+        padding: 15px;
+        border-radius: 0 10px 10px 10px;
+
+        &.own-text {
+          border-radius: 10px 10px 0px 10px;
+          background: rgba(17, 25, 37, 0.5);
+        }
+
+        .time {
+          position: absolute;
+          bottom: 5px;
+          right: 8px;
+          font-weight: 700;
+          font-size: 10px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+
+  .bottom-section {
+    @include centerAlign;
+    gap: 20px;
+    padding: 20px;
+    border-top: 1px solid lightslategrey;
+
+    .share-option {
+      @include centerAlign;
+      gap: 20px;
+
+      img {
+        height: 25px;
+      }
+    }
+
+    input {
+      flex: 1;
+      outline: none;
+      background: transparent;
+      background: rgba(17, 25, 37, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      font-size: 18px;
+
+      &::placeholder {
+        color: white;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    .emoji {
+      position: relative;
+      img {
+        height: 25px;
+      }
+
+      .picker {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+      }
+    }
+
+    .send-btn {
+      padding: 10px;
+      background-color: rgba(12, 129, 225);
+      border-radius: 10px;
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: rgba(12, 129, 225, 0.664);
+      }
+    }
+  }
+}

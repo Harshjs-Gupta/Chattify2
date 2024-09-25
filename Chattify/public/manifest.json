@@ -1,0 +1,10 @@
+{
+  "name": "Chattify",
+  "short_name": "Chattify",
+  "description": "A chatting web app for communication",
+  "start_url": "../index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6600",
+  "icons": []
+}

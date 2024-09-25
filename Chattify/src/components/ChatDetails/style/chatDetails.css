@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chat_details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.chat_details .details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid lightslategrey;
+}
+.chat_details .details img {
+  height: 180px;
+  width: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.chat_details .details span {
+  font-size: 25px;
+  font-weight: 700;
+}
+.chat_details .details p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.setting-container {
+  padding-bottom: 20px;
+}
+.setting-container .setting {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.setting-container .setting div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.setting-container .setting div span {
+  font-size: 20px;
+  font-weight: 500;
+}
+.setting-container .setting div img {
+  height: 30px;
+  background: rgba(17, 25, 27, 0.3);
+  padding: 10px;
+  border-radius: 50%;
+}
+.setting-container .shared-image {
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-bottom: 1px solid lightslategrey;
+}
+.setting-container .shared-image div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.setting-container .shared-image div div {
+  gap: 20px;
+}
+.setting-container .shared-image div div .image {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+}
+.setting-container .shared-image div div span {
+  font-weight: 600;
+  font-size: 20px;
+}
+.setting-container .shared-image div .download-icon {
+  height: 30px;
+  background: rgba(17, 25, 27, 0.3);
+  padding: 10px;
+  border-radius: 50%;
+}
+.setting-container .danger-zone {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.setting-container .danger-zone .block-btn {
+  width: 100%;
+  padding: 20px;
+  background: rgb(238, 98, 98);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.setting-container .danger-zone .block-btn:hover {
+  background: rgb(239, 63, 63);
+}
+.setting-container .danger-zone .logout-btn {
+  width: 100%;
+  padding: 20px;
+  background: rgb(106, 106, 229);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.setting-container .danger-zone .logout-btn:hover {
+  background: rgb(65, 65, 229);
+}/*# sourceMappingURL=chatDetails.css.map */

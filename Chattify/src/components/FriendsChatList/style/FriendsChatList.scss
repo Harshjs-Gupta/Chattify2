@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin centerJustify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerJustify-around {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin centerJustify-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin centerAlign {
+  display: flex;
+  align-items: center;
+}
+
+.user_info {
+  padding: 20px;
+  @include centerJustify-around;
+  gap: 20px;
+
+  div {
+    .profile {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    img {
+      height: 25px;
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+}
+
+.chatList {
+  padding: 20px;
+  border-bottom: 1px solid lightslategray;
+  .search {
+    @include centerJustify;
+    gap: 20px;
+    .search_bar {
+      background-color: rgba(17, 25, 37, 0.5);
+      @include centerJustify-around;
+      flex: 1;
+      gap: 20px;
+      border-radius: 10px;
+
+      img {
+        height: 18px;
+      }
+
+      input {
+        background: transparent;
+        outline: none;
+        flex: 1;
+      }
+    }
+
+    div {
+      background-color: rgba(17, 25, 37, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+
+      img {
+        height: 20px;
+      }
+    }
+  }
+}
+
+.list {
+  .last_message_container {
+    padding: 20px;
+    border-bottom: 1px solid lightslategrey;
+    @include centerJustify-between();
+    gap: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(248, 185, 134);
+    }
+
+    .user_name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      img {
+        height: 60px;
+        width: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+
+        .user_name {
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        .last_message {
+          font-weight: 500;
+          text-align: start;
+        }
+      }
+    }
+  }
+}
